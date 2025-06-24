@@ -123,5 +123,87 @@ public class exercicios {
         }
     }
 }
+public static void vetor(int ex) {
+        switch (ex) {
+            case 36:
+            	System.out.println("Informe a quantidade de números a serem digitados: ");
+            	int n = sc.nextInt();
+            	int[]vect = new int[n];
+            	System.out.println("Digite os números: ");
+            	for(int i = 0;i < vect.length;i++) {
+            		vect[i]= sc.nextInt();
+            	}
+            	System.out.println("Ordem digitada =");
+            	for(int i = 0; i < vect.length; i++) {
+                  	 System.out.print(vect[i] + " ");     	
+                   }
+                System.out.println("\nOrdem inversa = ");
+                for (int i = vect.length - 1; i >= 0; i--) {
+                   	 System.out.print(vect[i] + " ");     	
+                   }
+                 break;
+                 
+            case 44:
+            	System.out.println("Informe a quantidade de números a serem digitados: ");
+                 n = sc.nextInt();
+                 vect = new int[n];
+                
+                System.out.println("Digite os números: ");
+                for(int i = 0; i < vect.length; i++) {
+                	vect[i] = sc.nextInt();
+                }
+                
+                System.out.println("Números par = ");
+                for(int i = 0; i < vect.length; i++) {
+                	if(vect[i] % 2 == 0) {
+                	   System.out.print(vect[i] + " ");
+                	}
+                }
+              break;
+              
+            case 78:
+            	System.out.println("Informe a quantidade de números a serem digitados: ");
+        		n = sc.nextInt();
+        		vect = new int[n];
+        		
+
+        		System.out.println("Digite os números: ");
+        		for (int i = 0; i < vect.length; i++) {
+        			vect[i] = sc.nextInt();
+        		}
+
+        		System.out.println("Números ímpar = ");
+        		for (int i = 0; i < vect.length; i++) {
+        			if (vect[i] % 2 != 0) {
+        				System.out.print(vect[i] + " ");
+        			}
+        		}
+        		break;
+        		
+            case 82:
+            	System.out.println("Informe quantos produtos será lido os valores");
+        		n = sc.nextInt();
+        		vect =  new int[n];	
+        		
+         		for(int i = 0; i < vect.length; i++) {
+         			System.out.println("Informe o valor do " + (i + 1) + "° produto: ");
+        			vect[i] = sc.nextInt();
+        		}
+        		
+        		double maisCaro = vect[0];
+
+         		for(int i = 0; i < vect.length; i++) {
+         			if(maisCaro < vect[i]) {
+        			   maisCaro = vect[i];
+        			}
+        		}
+        		 
+        		System.out.println("Produto mais caro = " + maisCaro);
+        		
+            default:
+                System.out.println("Exercício inválido.");
+        }
+        }
+}
 
 
