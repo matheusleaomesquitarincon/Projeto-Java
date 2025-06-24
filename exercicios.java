@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class exercicios {
     static Scanner sc = new Scanner(System.in);
-
+   
     public static void sequencial(int ex) {
         switch (ex) {
             case 22:
@@ -15,6 +15,19 @@ public class exercicios {
                 double imc = peso / (altura * altura);
                 System.out.printf("IMC = %.2f\n", imc);
                 break;
+                
+            case 29:
+            	 double nota1, nota2, nota3, media;
+            	System.out.println("Digite a nota 1");
+            	 nota1 = sc.nextDouble();
+            	System.out.println("Digite a nota 2");
+            	 nota2 = sc.nextDouble();
+            	System.out.println("Digite a nota 3");
+            	 nota3 = sc.nextDouble();
+            	 media = (nota1 + nota2 + nota3) / 3;
+            	 System.out.printf("A Média do Aluno é: %.2f " , media);
+            	break;
+                 
 
             case 32:
                 System.out.println("Ex. 32 - Converter Data");
@@ -37,6 +50,7 @@ public class exercicios {
 
             default:
                 System.out.println("Exercício inválido.");
+               
         }
     }
 
@@ -69,6 +83,19 @@ public class exercicios {
                 else System.out.println("Não é quadrado perfeito.");
                 break;
 
+                
+            case 7:
+            	System.out.println("Digite sua idade:");
+            	int idade = sc.nextInt();
+            if (idade >= 18) {
+            	System.out.println("Você é maior de idade.");
+            } else if (idade >= 12) {
+            	System.out.println("Você é adolescente.");
+            } else {
+            	System.out.println("Você é uma criança.");
+            }
+           break;
+                
             default:
                 System.out.println("Exercício inválido.");
         }
@@ -91,13 +118,25 @@ public class exercicios {
                     System.out.println("Nenhum número válido informado.");
                 break;
 
+            case 24:
+            	System.out.println("Digite um número para ver a tabuada:");
+            	int numero = sc.nextInt();
+            	System.out.println("Tabuada de " + numero + ":");
+            	int resultado;
+            	for (int i = 1; i<= 10; i++) {
+            	resultado =  numero * i;  
+                System.out.println(numero + " X " + i + " = " + resultado);
+            	}
+              break;
+                
+                
             case 32:
                 System.out.println("Ex. 32 - Divisores de Números");
                 int n32;
                 do {
                     System.out.print("Digite um número (>0) ou 0 para sair: ");
                     n32 = sc.nextInt();
-                    if (n32 > 0) {
+                    if (n32 > 0){
                         System.out.print("Divisores: ");
                         for (int i = 1; i <= n32; i++) {
                             if (n32 % i == 0) System.out.print(i + " ");
@@ -117,13 +156,13 @@ public class exercicios {
                 }
                 System.out.println("Soma total: " + total);
                 break;
-
+                
             default:
                 System.out.println("Exercício inválido.");
+               
         }
     }
-}
-public static void vetor(int ex) {
+    public static void vetor(int ex) {
         switch (ex) {
             case 36:
             	System.out.println("Informe a quantidade de números a serem digitados: ");
@@ -205,5 +244,10 @@ public static void vetor(int ex) {
         }
         }
 }
+
+
+
+
+
 
 
